@@ -1,0 +1,29 @@
+# OS
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Build / output
+build/
+dist/
+bin/
+obj/
+*.log
+*.tmp
+
+# Engine cache (Unreal / Unity style placeholders)
+/Binaries/
+/Intermediate/
+/Saved/
+/Library/
+/Temp/
+
+# Secrets
+.env
+*.key
