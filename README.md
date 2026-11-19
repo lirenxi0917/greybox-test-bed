@@ -32,12 +32,14 @@ spacing, pacing, and feel can be iterated quickly without investing in final ass
 greybox-test-bed/
 ├── README.md                 # this document: goal, architecture, Milestone 1 spec
 ├── .gitignore                # ignore rules for build output, caches, secrets
-├── src/
-│   ├── core/                 # bootstrap, scene loading, config/parameter tables
-│   ├── player/               # placeholder capsule, movement, collision state
-│   ├── level/                # greybox rooms, walls, navigation volumes, spawns
-│   ├── interaction/          # triggers, interactable placeholders, doors/levers
-│   └── utils/                # shared helpers, debug draw, input mapping
+├── Source/
+│   └── GreyboxTestBed/
+│       ├── GreyboxTestBed.Build.cs        # UE5 module rules and dependencies
+│       ├── GreyboxTestBed.cpp             # module entry point
+│       ├── Public/
+│       │   └── GreyboxTestCharacter.h     # placeholder ACharacter movement class
+│       └── Private/
+│           └── GreyboxTestCharacter.cpp   # movement input, jump, debug state log
 └── docs/
     ├── milestone-1.md        # Milestone 1 requirements checklist (tracking)
     └── validation-checklist.md# flow / spacing / pacing review before art pass
@@ -64,10 +66,10 @@ all state ──▶ debug overlay (utils) for inspection and tuning
 
 ### 3.4 Runtime / stack (to be pinned in first implementation commit)
 
-- Runtime/engine: TBD — candidate engines evaluated in Milestone 1.
+- Runtime/engine: **Unreal Engine 5 (C++)**, module `GreyboxTestBed`.
 - Placeholder art: primitive meshes and flat-colored volumes only.
-- Code runtime: treated as generic; ignore rules below cover common Node/Python/build
-  artifacts, with engine-specific rules to be added once the stack is chosen.
+- Code runtime: C++ with the stock `UCharacterMovementComponent` as the movement base;
+  ignore rules below cover common Node/Python/build artifacts alongside UE cache folders.
 
 ## 4. Milestone 1 — Requirements Document
 
