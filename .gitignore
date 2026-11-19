@@ -14,16 +14,37 @@ build/
 dist/
 bin/
 obj/
+out/
 *.log
 *.tmp
 
-# Engine cache (Unreal / Unity style placeholders)
+# Node
+node_modules/
+npm-debug.log*
+yarn-error.log*
+.pnpm-store/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# Engine cache (Unreal / Unity / Godot placeholders)
 /Binaries/
 /Intermediate/
 /Saved/
 /Library/
 /Temp/
+/.godot/
+*.csproj.user
 
 # Secrets
 .env
+.env.local
 *.key
+*.pem
